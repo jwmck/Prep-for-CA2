@@ -1,0 +1,34 @@
+﻿@page  "{id}"
+@model Validation.Pages.DeleteStudentDetailsModel
+@{
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Number of Modules</th>
+            <th>Height (cm)</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@Model.Student.StudentID</td>
+                <td>@Model.Student.FirstName</td>
+                <td>@Model.Student.LastName</td>
+                <td>@Model.Student.DOB</td>
+                <td>@Model.Student.NrModules</td>
+                <td>@Model.Student.Height</td>
+                <td>@Model.Student.Email</td>
+            </tr>
+    </tbody>
+</table>
+
+<form method="post">
+    <input type="hidden" asp-for=Student.StudentID>
+    <button type="submit">Delete</button>
+</form>
